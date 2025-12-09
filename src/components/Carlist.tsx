@@ -213,7 +213,7 @@ function Carlist({ logOut }: CarlistProps) {
     );
   }
 
-  // Преобразуем данные для таблицы
+
   const rows = data.map(car => ({
     ...car,
     brand: car.brand || '',

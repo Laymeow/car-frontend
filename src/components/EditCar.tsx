@@ -35,7 +35,7 @@ function EditCarDialog({ open, cardata, onClose }: EditCarDialogProps) {
   const [error, setError] = useState<string | null>(null);
   const queryClient = useQueryClient();
 
-  // Загрузка владельцев
+
   const { data: owners = [] } = useQuery<Owner[]>({
     queryKey: ['owners'],
     queryFn: getOwners,

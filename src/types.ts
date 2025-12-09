@@ -15,17 +15,15 @@ export interface Car {
   owner?: Owner | null;
 }
 
-// Для создания новой машины (без id)
 export interface CarFormData {
   brand: string;
   model: string;
   color: string;
   regNum: string;
   price: number;
-  owner?: Owner | null; // Используем объект Owner, не ownerId
+  owner?: Owner | null; 
 }
 
-// Для упрощения, можно создать интерфейс с ownerId
 export interface CarFormDataWithOwnerId {
   brand: string;
   model: string;

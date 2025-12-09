@@ -23,12 +23,11 @@ function AddCar() {
     color: '',
     regNum: '',
     price: 0,
-    owner: null, // Используем owner объект
+    owner: null, 
   });
   const [error, setError] = useState<string | null>(null);
   const queryClient = useQueryClient();
 
-  // Загрузка владельцев с использованием новой функции
   const { data: owners = [] } = useQuery<Owner[]>({
     queryKey: ['owners'],
     queryFn: getOwners,
@@ -79,7 +78,6 @@ function AddCar() {
   };
 
   const handleSave = () => {
-    // Валидация
     if (!car.brand.trim()) {
       setError('Brand is required');
       return;
